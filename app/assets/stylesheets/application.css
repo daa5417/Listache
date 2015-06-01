@@ -19,6 +19,7 @@
 = require_self
 
 @import 'bootstrap';
+@import 'bootstrap-theme';
 
 body {
 	background-color: #d5eed8;
