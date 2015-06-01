@@ -13,10 +13,10 @@
  *= require_tree .
  *= require_self
  */
-*= require_tree .
-*= require bootstrap
-*= require bootstrap-theme
-*= require_self
+= require_tree .
+= require bootstrap
+= require bootstrap-theme
+= require_self
 
 body {
 	background-color: #d5eed8;
