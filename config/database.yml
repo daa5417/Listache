@@ -10,9 +10,9 @@
 #   timeout: 5000
 
   default: &default
-  adapter: postgresql
-  pool: 5
-  timeout: 5000
+    adapter: postgresql
+    pool: 5
+    timeout: 5000
 
 development:
   <<: *default
