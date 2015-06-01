@@ -1,12 +1,12 @@
 class ListsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_list, only: [:show, :edit, :update, :destroy, :add_item, :delete_item]
-  before_action :confirm_owner, only: [:show, :edit, :update, :destroy, :add_item, :delete_item]
+  before_action :set_list, only: [:show, :edit, :update, :destroy, :add_item, :delete_item, :send_form, :send_list]
+  before_action :confirm_owner, only: [:show, :edit, :update, :destroy, :add_item, :delete_item, :send_form, :send_list]
 
   # GET /lists
   # GET /lists.json
   def index
-    @list = List.new(user_id: current_user)
+    @list = List.new(user_id: current_user.id)
     @lists = List.where user_id: current_user.id
   end
 
@@ -92,6 +92,16 @@ def delete_item
         format.json { render json: @list.errors, status: :unprocessable_entity }
       end
     end
+end
+
+def send_form
+end
+
+def send_list
+  to_email = params['to_email']
+  message = params['message']
+  ListMailer.email_list(@list, current_user, to_email, message).deliver
+  redirect_to @list, notice: "Your list has been sent!"
 end
 
   private

@@ -1,3 +1,0 @@
-http://getbootstrap.com/getting-started/
-http://getbootstrap.com/css/
-https://developers.google.com/speed/libraries/
