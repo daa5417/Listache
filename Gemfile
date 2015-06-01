@@ -42,3 +42,8 @@ gem 'devise'
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem 'figaro'
+
+group :production do
+	# Use postgres as the database for Active Record
+	gem 'pg'
+end

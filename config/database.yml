@@ -26,8 +26,9 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: utf-8
+  database: db/listache_prod
 
 # default: &default
 #   adapter: postgresql
