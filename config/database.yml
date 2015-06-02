@@ -9,10 +9,13 @@
 #   pool: 5
 #   timeout: 5000
 
-  default: &default
-    adapter: postgresql
-    pool: 5
-    timeout: 5000
+default: &default
+  adapter: postgresql
+  encoding: utf-8
+  pool: 5
+  timeout: 5000
+  username: daa5417
+  password: harobeD11
 
 development:
   <<: *default
@@ -34,14 +37,6 @@ production:
 #   adapter: postgresql
 #   encoding: utf-8
 #   database: db/listache_prod
-
-# default: &default
-#   adapter: postgresql
-#   enconding: utf-8
-#   pool: 5
-#   timeout: 5000
-#   username: daa5417
-#   password: harobeD11
 
 # development:
 #   <<: *default
