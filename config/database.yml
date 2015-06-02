@@ -14,6 +14,8 @@
     pool: 5
     timeout: 5000
 
+
+
 development:
   <<: *default
   database: db/development.sqlite3
@@ -25,10 +27,19 @@ test:
   <<: *default
   database: db/test.sqlite3
 
-production:
+production:  
   adapter: postgresql
   encoding: utf-8
-  database: db/listache_prod
+  database: dce9nt8ijvm6na
+  pool: 5
+  username: ruakoaigigskgf
+  password: akCGmV3nqeo7Z7iU4QiyKgvkG3
+
+
+# production:
+#   adapter: postgresql
+#   encoding: utf-8
+#   database: db/listache_prod
 
 # default: &default
 #   adapter: postgresql
