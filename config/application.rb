@@ -22,3 +22,6 @@ module Listache
     # config.i18n.default_locale = :de
   end
 end
+
+  # In Rails 3.x, you can prevent initializing your application and connecting to the database
+  config.assets.initialize_on_precompile = false
